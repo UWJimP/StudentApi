@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: echo $DOCKER_TOKEN | docker login -u $DOCKER_USER --password-stdin
-      - run: docker image build -f ../dockerfile -t studentapi ..
+      - run: docker image build -f ../Dockerfile -t studentapi ..
       - run: docker image tag studentapi phanjim/studentapi:v0
       - run: docker push phanjim/studentapi:v0
       - run: docker logout
