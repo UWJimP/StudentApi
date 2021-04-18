@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StudentApi.Models;
@@ -9,6 +10,7 @@ using StudentApi.Repository;
 namespace StudentApi.Controllers 
 {
     [ApiController]
+    [EnableCors("public")]
     [Route("/rest/[controller]")]
     public class StudentController : ControllerBase
     {
